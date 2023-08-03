@@ -11,11 +11,11 @@ type classesOptions =
  */
 const classes = (options: classesOptions): string | undefined => {
 	if (typeof options === 'string') {
-		return options
+		return options.trim()
 	}
 
 	if (options instanceof Array) {
-		return options.map(classes).join(' ')
+		return options.map(classes).join(' ').trim()
 	}
 
 	const isDef = !isUndef(options)
@@ -23,6 +23,7 @@ const classes = (options: classesOptions): string | undefined => {
 		return Object.keys(options)
 			.filter((key: string) => !!options[key])
 			.join(' ')
+			.trim()
 	}
 
 	return undefined
