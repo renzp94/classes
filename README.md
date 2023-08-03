@@ -1,34 +1,24 @@
-# @renzp/build-info-webpack-plugin
+# @renzp/classes
 
-一款将打包信息打印在控制台的webpack插件
+条件式生成class字符串
 
 ## Install
 
 ```sh
-npm i @renzp/build-info-webpack-plugin -D 
+npm i @renzp/classes
 ```
 
 ## Usage
 
-`webpack.config.js`
-
 ```js
-import BuildInfoWebpackPlugin from '@renzp/build-info-webpack-plugin'
-module.exports = {
-    plugins: [BuildInfoWebpackPlugin]
-}
-```
+import classes from '@renzp/classes'
 
-### Options
-
-```ts
-interface Options {
-  showName?:boolean
-  showVersion?:boolean
-  nameBlockColor?: string
-  showTime?:boolean
-  timeBlockColor?: string
-  showGit?:boolean
-  gitBlockColor?: string
-}
+// 纯文本
+classes('hello') // => "hello"
+// 对象
+classes({ hello: true, word: false }) // "hello"
+// 数组
+classes(['hello', 'word']) // "hello word"
+// 对象数组
+classes(['hello', { word: true }]) // "hello word"
 ```
