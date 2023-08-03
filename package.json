@@ -1,6 +1,6 @@
 {
 	"name": "@renzp/classes",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "一款将打包信息打印在控制台的webpack插件",
 	"main": "./dist/index.js",
 	"types": "./dist/index.d.ts",
@@ -14,12 +14,17 @@
 		"test": "jest",
 		"pub": "npm run build && standard-version && npm publish"
 	},
-	"files": ["dist"],
+	"files": [
+		"dist"
+	],
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/renzp94/classes.git"
 	},
-	"keywords": ["classes", "classNames"],
+	"keywords": [
+		"classes",
+		"classNames"
+	],
 	"author": "renzp <1074720760.qq.com>",
 	"license": "MIT",
 	"bugs": {
@@ -31,7 +36,10 @@
 		"access": "public"
 	},
 	"lint-staged": {
-		"src/**/*.ts": ["rome check", "rome format --write"]
+		"src/**/*.ts": [
+			"rome check",
+			"rome format --write"
+		]
 	},
 	"simple-git-hooks": {
 		"pre-commit": "npx lint-staged"
