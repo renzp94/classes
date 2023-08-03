@@ -1,0 +1,45 @@
+{
+	"name": "@renzp/classes",
+	"version": "0.0.0",
+	"description": "一款将打包信息打印在控制台的webpack插件",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"scripts": {
+		"dev": "tsup --watch src",
+		"build": "tsup",
+		"release": "standard-version",
+		"lint": "rome check ./src",
+		"prepare": "npx simple-git-hooks",
+		"pub": "npm run build && standard-version && npm publish"
+	},
+	"files": ["dist"],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/renzp94/classes.git"
+	},
+	"keywords": ["classes", "classNames"],
+	"author": "renzp <1074720760.qq.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/renzp94/classes/issues"
+	},
+	"homepage": "https://github.com/renzp94/classes#readme",
+	"publishConfig": {
+		"registry": "https://registry.npmjs.org",
+		"access": "public"
+	},
+	"lint-staged": {
+		"src/**/*.ts": ["rome check", "rome format --write"]
+	},
+	"simple-git-hooks": {
+		"pre-commit": "npx lint-staged"
+	},
+	"devDependencies": {
+		"lint-staged": "^13.2.3",
+		"rome": "^12.1.3",
+		"simple-git-hooks": "^2.9.0",
+		"standard-version": "^9.5.0",
+		"tsup": "^5.12.9",
+		"typescript": "^5.1.6"
+	}
+}
