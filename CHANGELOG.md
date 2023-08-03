@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://github.com/renzp94/classes/compare/v0.0.2...v0.0.3) (2023-08-03)
+
+
+### Bug修复
+
+* 修复生成字符串后面出现空格的问题 ([8432e1e](https://github.com/renzp94/classes/commit/8432e1e9b532167eb967276251b8c811a545400b))
+
+
+### 其他
+
+* 使用bun打包 ([b0f4f0a](https://github.com/renzp94/classes/commit/b0f4f0a5da4a73911897e431818081f36bc66f1c))
+
 ### 0.0.2 (2023-08-03)
 
 

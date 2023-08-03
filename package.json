@@ -1,6 +1,6 @@
 {
 	"name": "@renzp/classes",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "条件式生成class字符串",
 	"main": "./dist/index.js",
 	"types": "./dist/index.d.ts",
@@ -15,12 +15,17 @@
 		"test": "bun test",
 		"pub": "bun run build && standard-version && npm publish"
 	},
-	"files": ["dist"],
+	"files": [
+		"dist"
+	],
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/renzp94/classes.git"
 	},
-	"keywords": ["classes", "classNames"],
+	"keywords": [
+		"classes",
+		"classNames"
+	],
 	"author": "renzp <1074720760.qq.com>",
 	"license": "MIT",
 	"bugs": {
@@ -32,7 +37,10 @@
 		"access": "public"
 	},
 	"lint-staged": {
-		"src/**/*.ts": ["rome check", "rome format --write"]
+		"src/**/*.ts": [
+			"rome check",
+			"rome format --write"
+		]
 	},
 	"simple-git-hooks": {
 		"pre-commit": "npx lint-staged"
