@@ -1,4 +1,5 @@
 import classes from '../src/index'
+import { expect, test } from 'bun:test'
 
 test(`"hello" => "hello"`, () => {
 	expect(classes('hello')).toBe('hello')
